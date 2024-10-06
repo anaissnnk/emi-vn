@@ -1,28 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 275, in script
-    python:
-ScriptError: could not find label 'start'.
+  File "game/script.rpy", line 9, in script
+    show border onlayer UI
+Exception: Trying to add something to non-existent layer 'UI'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\bootstrap.py", line 275, in bootstrap
-    renpy.main.main()
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\main.py", line 670, in main
-    run(restart)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\main.py", line 144, in run
-    renpy.execution.run_context(True)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\execution.py", line 953, in run_context
-    context.run()
-  File "renpy/common/00start.rpy", line 275, in script
-    python:
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\script.py", line 1013, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'start'.
+  File "game/script.rpy", line 9, in script
+    show border onlayer UI
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 1428, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 1391, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\exports.py", line 759, in show
+    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\display\core.py", line 1210, in add
+    raise Exception("Trying to add something to non-existent layer '%s'." % layer)
+Exception: Trying to add something to non-existent layer 'UI'.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.1.1.23060707
 Emi VN 1.0
-Sun Oct  6 16:35:34 2024
+Sun Oct  6 18:38:38 2024
