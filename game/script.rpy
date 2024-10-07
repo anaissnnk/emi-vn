@@ -9,7 +9,7 @@ label start:
     show border onlayer screens 
     play music "reflexion.mp3" fadein 0.5
     scene emi_room with dissolve
-    show emi_neutral at left with dissolve
+    show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
 
     e "I'm standing on the left."
     hide emi_neutral
@@ -17,14 +17,15 @@ label start:
     menu:
         e "The following is a dice roll test."
         "Roll the dice":
-            #hide textbox
-            window hide
             #dice roll function
             $ d20roll = renpy.random.randint(1, 20)
+            #hide textbox
+            window hide
+            pause 0.8
             show dice at Transform(zoom = 0.5):
                 xpos 0.0 ypos 0.0
                 ease 2.0 xpos 0.5 ypos 0.5
-            pause 4
+            pause 3.5
             hide dice
             e "You rolled a [d20roll]"
             e "Is it good?"
