@@ -12,13 +12,23 @@ label start:
     show emi_neutral at left with dissolve
 
     e "I'm standing on the left."
+    hide emi_neutral
 
     menu:
         e "The following is a dice roll test."
         "Roll the dice":
-        #dice roll function
+            #hide textbox
+            window hide
+            #dice roll function
             $ d20roll = renpy.random.randint(1, 20)
+            show dice at Transform(zoom = 0.5):
+                xpos 0.0 ypos 0.0
+                ease 2.0 xpos 0.5 ypos 0.5
+            pause 4
+            hide dice
             e "You rolled a [d20roll]"
+            e "Is it good?"
+    
         "Don't roll the dice":
             e "You didn't roll the dice"
 
