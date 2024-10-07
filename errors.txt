@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 12: end of line expected.
-    scene emi_room with fadein 0.5
-                               ^
+File "game/script.rpy", line 20: expected statement.
+    "You rolled a " + [d20roll]
+                    ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Sun Oct  6 18:27:00 2024
+Mon Oct  7 20:06:18 2024

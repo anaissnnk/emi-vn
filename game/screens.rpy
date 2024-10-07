@@ -450,6 +450,8 @@ screen navigation():
 
             textbutton _("About") action ShowMenu("about")
 
+            
+
             if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
                 ## Help isn't necessary or relevant to mobile devices.
@@ -712,10 +714,10 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     use navigation
     
-    # textbutton _("Return"):
-        # style "return_button"
+    textbutton _("Return"):
+        style "return_button"
 
-        # action Return()
+        action Return()
 
     label title:
         xalign 0.5 ypos -40
