@@ -11,7 +11,7 @@ label start:
 
     scene emi_room with dissolve
     show screen statButton
-    
+
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
 
     e "I'm standing on the left."
@@ -33,20 +33,23 @@ label start:
             hide dice
             #declare result
             e "You rolled a [dice_roll]. Your intelligence bonus is ([intelligence]). The total is [total]."
+
+
+            e "Let's try a second time to see if we can reuse the same variable and get a different result."
+            $ dice_roll, total = intelligence_check(intelligence)
+            #hide textbox
+            window hide
+            pause 0.8
+            #dice animation
+            show dice at Transform(zoom = 0.5):
+                xpos 0.0 ypos 0.0
+                ease 2.0 xpos 0.5 ypos 0.5
+            pause 3.5
+            hide dice
+            #declare result
+            e "You rolled a [dice_roll]. Your intelligence bonus is ([intelligence]). The total is [total]."
             e "Did that work?"
 
-            # e "Let's try a second time to see if we can reuse the same variable and get a different result."
-            # $ d20roll = renpy.random.randint(1, 20)
-            # #hide textbox
-            # window hide
-            # pause 0.8
-            # show dice at Transform(zoom = 0.5):
-            #     xpos 0.0 ypos 0.0
-            #     ease 2.0 xpos 0.5 ypos 0.5
-            # pause 3.5
-            # hide dice
-            # $ total = d20roll + intelligence + proficency
-            # e "You rolled a [d20roll], adding [proficency] and [intelligence], which makes [total]"
     
         "Don't roll the dice":
             e "You didn't roll the dice"
