@@ -15,3 +15,4 @@ default intelligence = 4
 default wisdom = 0 
 default charisma = -1 
 default proficency = 3 
+

@@ -1,71 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 24, in script
-    e "I'm standing on the left."
-  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 75, in _window_show
-    renpy.with_statement(trans)
-  File "game/custom_screens.rpy", line 1, in execute
-    screen emiStats:
-  File "game/custom_screens.rpy", line 1, in execute
-    screen emiStats:
-  File "game/custom_screens.rpy", line 2, in execute
-    imagebutton:
-Exception: Imagebutton does not have a idle image.
+  File "game/script.rpy", line 27, in script
+    $ dice_animation()
+  File "game/script.rpy", line 27, in <module>
+    $ dice_animation()
+  File "game/functions.rpy", line 5, in dice_animation
+    renpy.show("dice", at="dashed", layer="master")
+TypeError: show() got an unexpected keyword argument 'at'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 24, in script
-    e "I'm standing on the left."
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 2573, in execute
-    Say.execute(self)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 583, in execute
-    statement_name(stmt_name)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 52, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 75, in _window_show
-    renpy.with_statement(trans)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\exports\statementexports.py", line 257, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\display\core.py", line 1578, in do_with
-    return self.interact(trans_pause=True,
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\display\core.py", line 2215, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\display\core.py", line 2745, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  [Previous line repeated 1 more time]
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\display\screen.py", line 480, in visit_all
-    callback(self)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\display\core.py", line 2745, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\display\screen.py", line 491, in per_interact
-    self.update()
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\display\screen.py", line 697, in update
-    self.screen.function(**self.scope)
-  File "game/custom_screens.rpy", line 1, in execute
-    screen emiStats:
-  File "game/custom_screens.rpy", line 1, in execute
-    screen emiStats:
-  File "game/custom_screens.rpy", line 2, in execute
-    imagebutton:
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ui.py", line 975, in _imagebutton
-    idle = choice(idle, idle_image, "idle", required=True)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ui.py", line 971, in choice
-    raise Exception("Imagebutton does not have a %s image." % (name,))
-Exception: Imagebutton does not have a idle image.
+  File "game/script.rpy", line 27, in script
+    $ dice_animation()
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 27, in <module>
+    $ dice_animation()
+  File "game/functions.rpy", line 5, in dice_animation
+    renpy.show("dice", at="dashed", layer="master")
+TypeError: show() got an unexpected keyword argument 'at'
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.3.24100702+nightly
 Emi VN 1.0
-Tue Oct  8 19:55:10 2024
+Tue Oct  8 21:47:36 2024

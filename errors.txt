@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 49: invalid syntax
-    total = $ d20roll + $ intelligence + $ proficency
-             ^
-
-File "game/script.rpy", line 62: invalid syntax
-    total = $ d20roll + $ intelligence + $ proficency
-             ^
+File "game/functions.rpy", line 3: invalid syntax
+        show dice at Transform(zoom=0.5),\
+              ^
 
 Ren'Py Version: Ren'Py 8.3.3.24100702+nightly
-Tue Oct  8 20:49:05 2024
+Tue Oct  8 21:55:55 2024
