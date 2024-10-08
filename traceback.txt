@@ -1,30 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 27, in script
-    $ dice_animation()
-  File "game/script.rpy", line 27, in <module>
-    $ dice_animation()
-  File "game/functions.rpy", line 5, in dice_animation
-    renpy.show("dice", at="dashed", layer="master")
-TypeError: show() got an unexpected keyword argument 'at'
+  File "game/script.rpy", line 55, in script
+    $ dice_roll, total = intelligence_expertise_check(intelligence, expertise)
+  File "game/script.rpy", line 55, in <module>
+    $ dice_roll, total = intelligence_expertise_check(intelligence, expertise)
+NameError: name 'expertise' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 27, in script
-    $ dice_animation()
+  File "game/script.rpy", line 55, in script
+    $ dice_roll, total = intelligence_expertise_check(intelligence, expertise)
   File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 821, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/script.rpy", line 27, in <module>
-    $ dice_animation()
-  File "game/functions.rpy", line 5, in dice_animation
-    renpy.show("dice", at="dashed", layer="master")
-TypeError: show() got an unexpected keyword argument 'at'
+  File "game/script.rpy", line 55, in <module>
+    $ dice_roll, total = intelligence_expertise_check(intelligence, expertise)
+NameError: name 'expertise' is not defined
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.3.24100702+nightly
 Emi VN 1.0
-Tue Oct  8 21:47:36 2024
+Tue Oct  8 22:12:34 2024

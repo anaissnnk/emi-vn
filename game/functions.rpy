@@ -36,7 +36,7 @@ init python:
 
 # charisma check
 init python:
-    def constitution_check(charisma):
+    def charisma_check(charisma):
         dice_roll = renpy.random.randint(1, 20)
         total = dice_roll + charisma
         return dice_roll, total
@@ -59,7 +59,7 @@ init python:
 # EXPERTISE
 # investigation
 init python:
-    def intelligence_expertise_check (dexterity, expertise):
+    def intelligence_expertise_check (intelligence, expertise):
         dice_roll = renpy.random.randint(1, 20)
         total = dice_roll + intelligence + expertise
         return dice_roll, total

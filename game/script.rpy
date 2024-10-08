@@ -18,10 +18,10 @@ label start:
     hide emi_neutral
 
     menu:
-        e "The following is an intelligence check."
+        e "The following is a charisma check."
         "Roll the dice":
             #dice roll function
-            $ dice_roll, total = intelligence_check(intelligence)
+            $ dice_roll, total = charisma_check(charisma)
             #hide textbox
             window hide
             pause 0.8
@@ -32,11 +32,11 @@ label start:
             pause 3.5
             hide dice
             #declare result
-            e "You rolled a [dice_roll]. Your intelligence bonus is ([intelligence]). The total is [total]."
+            e "You rolled a [dice_roll]. Your charisma bonus is ([charisma]). The total is [total]."
 
 
-            e "Let's try a second time to see if we can reuse the same variable and get a different result."
-            $ dice_roll, total = intelligence_check(intelligence)
+            e "Let's try a roll with proficency."
+            $ dice_roll, total = intelligence_proficency_check(intelligence, proficency)
             #hide textbox
             window hide
             pause 0.8
@@ -47,7 +47,23 @@ label start:
             pause 3.5
             hide dice
             #declare result
-            e "You rolled a [dice_roll]. Your intelligence bonus is ([intelligence]). The total is [total]."
+            e "You rolled a [dice_roll]. Your intelligence bonus is ([intelligence]) and your proficency is ([proficency]). The total is [total]."
+            e "Did that work?"
+            
+            
+            e "Now let's try expertise."
+            $ dice_roll, total = intelligence_expertise_check(intelligence, expertise)
+            #hide textbox
+            window hide
+            pause 0.8
+            #dice animation
+            show dice at Transform(zoom = 0.5):
+                xpos 0.0 ypos 0.0
+                ease 2.0 xpos 0.5 ypos 0.5
+            pause 3.5
+            hide dice
+            #declare result
+            e "You rolled a [dice_roll]. Your intelligence bonus is ([intelligence]) and your expertise is ([expertise]). The total is [total]."
             e "Did that work?"
 
     
