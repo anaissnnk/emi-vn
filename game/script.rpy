@@ -1,4 +1,13 @@
-﻿# Characters
+﻿#Emi's stats
+default strength = 1
+default dexterity = 2 
+default constitution = 1 
+default intelligence = 4
+default wisdom = 0 
+default charisma = -1 
+default proficency = 3 
+
+# Characters
 define e = Character("Emi")
 
 #Backgrounds
