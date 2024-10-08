@@ -6,6 +6,7 @@ $ intelligence = 4
 $ wisdom = 0 
 $ charisma = -1 
 $ proficency = 3 
+$ expertise = 4
 
 # Emi's stats page
 default strength = 1
