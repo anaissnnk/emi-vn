@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 12: multiple at clauses are prohibited.
-    show emi_neutral at left at Transform(zoom = 0.5) with dissolve
-                               ^
+File "game/custom_screens.rpy", line 9: 'onclick' is not a keyword argument or valid child of the imagebutton statement.
+    onclick ShowMenu ("emiStats")
+           ^
 
-Ren'Py Version: Ren'Py 8.1.1.23060707
-Mon Oct  7 21:53:59 2024
+File "game/custom_screens.rpy", line 19: 'onclick' is not a keyword argument or valid child of the imagebutton statement.
+    onclick Return ()
+           ^
+
+Ren'Py Version: Ren'Py 8.3.3.24100702+nightly
+Tue Oct  8 20:34:59 2024

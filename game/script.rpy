@@ -18,6 +18,7 @@ label start:
     show border onlayer screens 
     play music "reflexion.mp3" fadein 0.5
     scene emi_room with dissolve
+    show screen statButton
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
 
     e "I'm standing on the left."
