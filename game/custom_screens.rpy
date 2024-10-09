@@ -1,4 +1,4 @@
-# what the player can click on the display stats page
+# img button to display state on main UI
 screen statButton:
     imagebutton:
         xalign 1.0
@@ -11,10 +11,10 @@ screen statButton:
 
 # display the page content related to stats
 screen emiStats:
-    #define screen bg colour
-    fixed:
-        add Solid("#3498db")
-    #return button
+    # set stats bg image
+    add "gui/main_menu.png"
+
+    #stats button behavior
     imagebutton:
         xalign 1.0
         yalign 0.07
@@ -23,13 +23,13 @@ screen emiStats:
         idle "images/misc/stats.png"
         hover "images/misc/stats_hover.png"
         action Return ()
+
     #frame containing the stats block
     frame:
-        background Solid("#3498db")
         xalign 0.5
         yalign 0.5
-        xpadding 30
-        ypadding 30
+        xpadding 40
+        ypadding 40
         #box placement
         hbox:
             spacing 40

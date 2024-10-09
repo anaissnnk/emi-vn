@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/custom_screens.rpy", line 8: 'zoom' is not a keyword argument or valid child of the imagebutton statement.
-    zoom (O.5)
+File "game/custom_screens.rpy", line 29: 'show' is not a keyword argument or valid child of the frame statement.
+    show "gui/main_menu.png"
         ^
 
 Ren'Py Version: Ren'Py 8.3.3.24100702+nightly
-Wed Oct  9 18:57:29 2024
+Wed Oct  9 19:09:51 2024
