@@ -2,11 +2,11 @@
 screen statButton:
     imagebutton:
         xalign 1.0
-        yalign 0.0
+        yalign 0.07
         xoffset -30
         yoffset 30
-        idle "images/misc/dice.png"
-        #hover action to add
+        idle "images/misc/stats.png"
+        hover "images/misc/stats_hover.png"
         action ShowMenu ("emiStats")
 
 # display the page content related to stats
@@ -17,11 +17,11 @@ screen emiStats:
     #return button
     imagebutton:
         xalign 1.0
-        yalign 0.0
+        yalign 0.07
         xoffset -30
         yoffset 30
-        idle "images/misc/dice.png"
-        #hover
+        idle "images/misc/stats.png"
+        hover "images/misc/stats_hover.png"
         action Return ()
     #frame containing the stats block
     frame:
