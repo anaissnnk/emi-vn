@@ -1,26 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 55, in script
-    $ dice_roll, total = intelligence_expertise_check(intelligence, expertise)
-  File "game/script.rpy", line 55, in <module>
-    $ dice_roll, total = intelligence_expertise_check(intelligence, expertise)
-NameError: name 'expertise' is not defined
+  File "game/script.rpy", line 24, in script
+    show bad_end_eli at zoom(0.5), truecenter
+  File "game/script.rpy", line 24, in <module>
+    show bad_end_eli at zoom(0.5), truecenter
+NameError: name 'zoom' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 55, in script
-    $ dice_roll, total = intelligence_expertise_check(intelligence, expertise)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 821, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/script.rpy", line 55, in <module>
-    $ dice_roll, total = intelligence_expertise_check(intelligence, expertise)
-NameError: name 'expertise' is not defined
+  File "game/script.rpy", line 24, in script
+    show bad_end_eli at zoom(0.5), truecenter
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 1111, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 1070, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 1070, in <listcomp>
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 24, in <module>
+    show bad_end_eli at zoom(0.5), truecenter
+NameError: name 'zoom' is not defined
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.3.24100702+nightly
 Emi VN 1.0
-Tue Oct  8 22:12:34 2024
+Sun Oct 13 10:30:48 2024

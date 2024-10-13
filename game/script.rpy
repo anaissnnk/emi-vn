@@ -12,12 +12,20 @@ label start:
     scene emi_room with dissolve
     show screen statButton
 
-    show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
 
     e "I'm standing on the left."
     hide emi_neutral
 
-    e ""
+    e "The following is an ending pic slide test"
+    window hide
+    pause 0.8
+    # ending slide animation
+    show bad_end_eli at Transform(zoom = 0.8) with dissolve:
+        truecenter
+        # ease 2.0 xpos .1 ypos 1.1
+    pause 3.0
+    hide bad_end_eli
 
     #check
     menu:
@@ -29,7 +37,7 @@ label start:
             window hide
             pause 0.8
             #dice animation
-            show dice at Transform(zoom = 0.5):
+            show dice at Transform(zoom = 0.5) with dissolve:
                 xpos 0.0 ypos 0.0
                 ease 2.0 xpos 0.5 ypos 0.5
             pause 3.5
@@ -44,7 +52,7 @@ label start:
             window hide
             pause 0.8
             #dice animation
-            show dice at Transform(zoom = 0.5):
+            show dice at Transform(zoom = 0.5) with dissolve:
                 xpos 0.0 ypos 0.0
                 ease 2.0 xpos 0.5 ypos 0.5
             pause 3.5
@@ -60,7 +68,7 @@ label start:
             window hide
             pause 0.8
             #dice animation
-            show dice at Transform(zoom = 0.5):
+            show dice at Transform(zoom = 0.5) with dissolve:
                 xpos 0.0 ypos 0.0
                 ease 2.0 xpos 0.5 ypos 0.5
             pause 3.5
