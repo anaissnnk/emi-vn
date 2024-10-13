@@ -1,32 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 24, in script
-    show bad_end_eli at zoom(0.5), truecenter
-  File "game/script.rpy", line 24, in <module>
-    show bad_end_eli at zoom(0.5), truecenter
-NameError: name 'zoom' is not defined
+  File "game/variables.rpy", line 6, in script
+    image dark_bg = (22,23,27)
+Exception: Not a displayable: (22, 23, 27)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 24, in script
-    show bad_end_eli at zoom(0.5), truecenter
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 1111, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 1070, in show_imspec
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 1070, in <listcomp>
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 24, in <module>
-    show bad_end_eli at zoom(0.5), truecenter
-NameError: name 'zoom' is not defined
+  File "game/variables.rpy", line 6, in script
+    image dark_bg = (22,23,27)
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 924, in execute
+    renpy.exports.image(self.imgname, img)
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\exports\displayexports.py", line 73, in image
+    d = renpy.easy.displayable(d)
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\easy.py", line 145, in displayable
+    raise Exception("Not a displayable: %r" % (d,))
+Exception: Not a displayable: (22, 23, 27)
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.3.24100702+nightly
 Emi VN 1.0
-Sun Oct 13 10:30:48 2024
+Sun Oct 13 11:23:31 2024

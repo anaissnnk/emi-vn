@@ -1,3 +1,10 @@
+# Characters
+define e = Character("Emi")
+
+#Backgrounds
+image emi_room = "bg/emis_room.png"
+image dark_bg = ("#16171b")
+
 # Stats variables
 $ strength = 1
 $ dexterity = 2 

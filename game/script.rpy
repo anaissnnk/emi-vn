@@ -1,15 +1,8 @@
-﻿# Characters
-define e = Character("Emi")
-
-#Backgrounds
-image emi_room = "bg/emis_room.png"
-
-# The game starts here.
-label start:
+﻿label start:
     show border onlayer screens 
     play music "reflexion.mp3" fadein 0.5
 
-    scene emi_room with dissolve
+    scene emi_room
     show screen statButton
 
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
@@ -18,10 +11,11 @@ label start:
     hide emi_neutral
 
     e "The following is an ending pic slide test"
+    scene dark_bg
     window hide
     pause 0.8
     # ending slide animation
-    show bad_end_eli at Transform(zoom = 0.8) with dissolve:
+    show bad_end_eli at Transform(zoom = 0.6) with dissolve:
         truecenter
         # ease 2.0 xpos .1 ypos 1.1
     pause 3.0
@@ -44,8 +38,6 @@ label start:
             hide dice
             #declare result
             e "You rolled a [dice_roll]. Your charisma bonus is ([charisma]). The total is [total]."
-
-
             e "Let's try a roll with proficency."
             $ dice_roll, total = intelligence_proficency_check(intelligence, proficency)
             #hide textbox
