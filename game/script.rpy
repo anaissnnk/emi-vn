@@ -17,6 +17,9 @@ label start:
     e "I'm standing on the left."
     hide emi_neutral
 
+    e ""
+
+    #check
     menu:
         e "The following is a charisma check."
         "Roll the dice":
