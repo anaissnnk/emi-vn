@@ -2,11 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 6: end of line expected.
-(Perhaps you left out a ' at the end of the first line.)
-    "{i}"There's nothing quite like enjoying a nice cup of tea and watching the sun rise.\"{/i}"
-        "\"I hope one day, you'll ne able to enjoy the nice little things life has to offer.\""
-                                ^
+File "game/script.rpy", line 56: expecting name after dot.
+    "blank".
+            ^
+
+File "game/script.rpy", line 59: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "Wait... is that beer on the kitchen counter??"
+                                                   ^
 
 Ren'Py Version: Ren'Py 8.3.3.24100702+nightly
-Mon Oct 21 18:52:58 2024
+Mon Oct 21 19:44:06 2024

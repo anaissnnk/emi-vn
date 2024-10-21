@@ -20,7 +20,7 @@
 
     #TODO: add dramatic music
     #TODO: add scene with chibi?
-    
+
     scene workshop
     show screen statButton
     #TODO: add silly music
@@ -49,6 +49,16 @@ label path:
     hide emi_smirk
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     e "Now, what should I do for the rest of the day?"
+
+    menu:
+        "What should I do?"
+        "Stay at the workshop and work on my babies of course!":
+            "blank."
+        "Take a stroll in the forest.":
+            "blank."
+        "Wait... is that beer on the kitchen counter??":
+            "blank."
+
 
 
 
