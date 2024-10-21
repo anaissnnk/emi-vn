@@ -12,7 +12,7 @@
     show screen statButton
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
 
-    e "Indeed, I believe there would be nothing better than to enjoy a quiet peaceful morning..."
+    e "Indeed, I believe there would be nothsing better than to enjoy a quiet peaceful morning..."
 
     hide emi_neutral
     #TODO: stop chill music
@@ -22,14 +22,21 @@
     hide screen statButton
     scene dark_bg
     window hide
-    pause 0.8
+    pause 0.7
     # img slide animation
-    show emi_chibi_sad at Transform(zoom = 0.6) with dissolve:
+    show emi_chibi_sad at Transform(zoom = 0.5) with dissolve:
         truecenter
     pause 3.0
     hide emi_chibi_sad
 
-    "test"
+    scene emi_room
+    show screen statButton
+    #TODO: add silly music
+    show emi_sad2 at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+    e "I know it was my fault for opening the shop late, but still..."
+    e "Those adventurers didn't have to be so mean."
+
+
 
 
 
