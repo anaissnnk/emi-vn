@@ -1,11 +1,41 @@
 ﻿label start:
     show border onlayer screens
-    # TODO: add pensive music
+    #TODO: add pensive music
 
     "My mom always made a fuss about my sleeping habits."
     "{i}\"There's nothing quite like enjoying a nice cup of tea and watching the sun rise.\"{/i}"
     "{i}\"I hope one day, you'll be able to enjoy the nice little things life has to offer.\"{/i}"
     "{i}\"Unlike the complete blockhead of a man I ended up marrying and who calls himself your father--\"{/i}"
+
+    scene emi_room
+    #TODO: add chill music
+    show screen statButton
+    show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+
+    e "Indeed, I believe there would be nothing better than to enjoy a quiet peaceful morning..."
+
+    hide emi_neutral
+    #TODO: stop chill music
+    e "... without having to face the consequences of waking up late when I was on morning shift."
+
+    #TODO: add dramatic music
+    hide screen statButton
+    scene dark_bg
+    window hide
+    pause 0.8
+    # img slide animation
+    show emi_chibi_sad at Transform(zoom = 0.6) with dissolve:
+        truecenter
+    pause 3.0
+    hide emi_chibi_sad
+
+    "test"
+
+
+
+
+
+
 
 label template:
     show border onlayer screens 
@@ -20,16 +50,16 @@ label template:
     hide emi_neutral
 
     e "The following is an ending pic slide test"
+
     hide screen statButton
     scene dark_bg
     window hide
     pause 0.8
-    # ending slide animation
-    show bad_end_eli at Transform(zoom = 0.6) with dissolve:
+    # img slide animation
+    show emi_chibi_sad at Transform(zoom = 0.6) with dissolve:
         truecenter
-        # ease 2.0 xpos .1 ypos 1.1
     pause 3.0
-    hide bad_end_eli
+    hide emi_chibi_sad
 
     # back to main interface
 
