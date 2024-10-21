@@ -21,6 +21,11 @@
     pause 3.0
     hide bad_end_eli
 
+    # back to main interface
+
+    scene emi_room
+    show screen statButton
+
     #check
     menu:
         e "The following is a charisma check."
@@ -72,15 +77,6 @@
     
         "Don't roll the dice":
             e "You didn't roll the dice"
-
-
-    #second roll
-    # e "Let's try again"
-    # $ d20roll = renpy.random.randint(1, 20)
-    # e "This time, you rolled a [d20roll]"
-
-
-
 
     # This ends the game.
     return
