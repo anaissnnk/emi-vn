@@ -11,6 +11,7 @@
     hide emi_neutral
 
     e "The following is an ending pic slide test"
+    hide screen statButton
     scene dark_bg
     window hide
     pause 0.8
