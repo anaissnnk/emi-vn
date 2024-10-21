@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 24: expected 'simple_expression' not found.
-    show bad_end_eli at transform(zoom = 0.5):
-                        ^
+File "game/script.rpy", line 6: end of line expected.
+(Perhaps you left out a ' at the end of the first line.)
+    "{i}"There's nothing quite like enjoying a nice cup of tea and watching the sun rise.\"{/i}"
+        "\"I hope one day, you'll ne able to enjoy the nice little things life has to offer.\""
+                                ^
 
 Ren'Py Version: Ren'Py 8.3.3.24100702+nightly
-Sun Oct 13 10:32:03 2024
+Mon Oct 21 18:52:58 2024

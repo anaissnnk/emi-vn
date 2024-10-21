@@ -1,4 +1,13 @@
 ﻿label start:
+    show border onlayer screens
+    # TODO: add pensive music
+
+    "My mom always made a fuss about my sleeping habits."
+    "{i}\"There's nothing quite like enjoying a nice cup of tea and watching the sun rise.\"{/i}"
+    "{i}\"I hope one day, you'll be able to enjoy the nice little things life has to offer.\"{/i}"
+    "{i}\"Unlike the complete blockhead of a man I ended up marrying and who calls himself your father--\"{/i}"
+
+label template:
     show border onlayer screens 
     play music "reflexion.mp3" fadein 0.5
 
