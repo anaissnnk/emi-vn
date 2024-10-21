@@ -7,19 +7,21 @@
     "{i}\"I hope one day, you'll be able to enjoy the nice little things life has to offer.\"{/i}"
     "{i}\"Unlike the complete blockhead of a man I ended up marrying and who calls himself your father--\"{/i}"
 
-    scene emi_room
+    scene workshop
     #TODO: add chill music
     show screen statButton
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
 
-    e "Indeed, I believe there would be nothsing better than to enjoy a quiet peaceful morning..."
+    e "Indeed, I believe there would be nothing better than to enjoy a quiet peaceful morning..."
 
     hide emi_neutral
     #TODO: stop chill music
-    e "... without having to face the consequences of waking up late when I was on morning shift."
+    e "... without having to face the consequences of waking up late when the shop was exceptionally open this morning."
 
     #TODO: add dramatic music
-    scene emi_room
+    #TODO: add scene with chibi?
+    
+    scene workshop
     show screen statButton
     #TODO: add silly music
     show emi_sad2 at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
@@ -32,8 +34,24 @@
     e "{i}Nobody hurts Wabee.{/i}"
     e "..."
     e "{i}I hope they get attacked by a bugbear.{/i}"
+    e "{i}Assholes.{/i}"
 
-    
+
+label path:
+    #TODO: check for new music?
+    scene workshop
+    hide emi_annoyed
+    show emi_sigh at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+    e "{i}Sigh{/i}. At least they're gone, and I can finally close the shop!"
+    hide emi_sigh 
+    show emi_smirk at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    e "I'll have Master Baltazar treat me at the tavern once he's back. That's the least he can do!"
+    hide emi_smirk
+    show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+    e "Now, what should I do for the rest of the day?"
+
+
+
 
 
 
@@ -47,7 +65,7 @@ label template:
     show border onlayer screens 
     play music "reflexion.mp3" fadein 0.5
 
-    scene emi_room
+    scene workshop
     show screen statButton
 
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
@@ -69,7 +87,7 @@ label template:
 
     # back to main interface
 
-    scene emi_room
+    scene workshop
     show screen statButton
 
     #check
