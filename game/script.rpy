@@ -19,22 +19,21 @@
     e "... without having to face the consequences of waking up late when I was on morning shift."
 
     #TODO: add dramatic music
-    hide screen statButton
-    scene dark_bg
-    window hide
-    pause 0.7
-    # img slide animation
-    show emi_chibi_sad at Transform(zoom = 0.5) with dissolve:
-        truecenter
-    pause 3.0
-    hide emi_chibi_sad
-
     scene emi_room
     show screen statButton
     #TODO: add silly music
-    show emi_sad2 at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+    show emi_sad2 at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "I know it was my fault for opening the shop late, but still..."
     e "Those adventurers didn't have to be so mean."
+
+    hide emi_sad2
+    show emi_annoyed at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    e "And it wasn't such a big deal that they had to kick Wabee."
+    e "{i}Nobody hurts Wabee.{/i}"
+    e "..."
+    e "{i}I hope they get attacked by a bugbear.{/i}"
+
+    
 
 
 

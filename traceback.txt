@@ -1,24 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/variables.rpy", line 6, in script
-    image dark_bg = (22,23,27)
-Exception: Not a displayable: (22, 23, 27)
+  File "game/script.rpy", line 40, in script
+    show emi_annoyed t Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+Exception: Image 'emi_annoyed' does not accept attributes 't Transform (xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/variables.rpy", line 6, in script
-    image dark_bg = (22,23,27)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 924, in execute
-    renpy.exports.image(self.imgname, img)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\exports\displayexports.py", line 73, in image
-    d = renpy.easy.displayable(d)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\easy.py", line 145, in displayable
-    raise Exception("Not a displayable: %r" % (d,))
-Exception: Not a displayable: (22, 23, 27)
+  File "game/script.rpy", line 40, in script
+    show emi_annoyed t Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 1111, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 1074, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\exports\displayexports.py", line 477, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\display\displayable.py", line 249, in _duplicate
+    args.extraneous()
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\display\displayable.py", line 109, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'emi_annoyed' does not accept attributes 't Transform (xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)'.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.3.24100702+nightly
 Emi VN 1.0
-Sun Oct 13 11:23:31 2024
+Mon Oct 21 19:17:22 2024
