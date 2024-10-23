@@ -56,15 +56,15 @@ label path:
 
         #CRAFT PATH
         "Craft the day away.":
-            "blank."
+            jump craft_path
 
         #ARA's PATH
         "Take a stroll in the forest.":
-            "blank."
+            jump ara_path
 
         #YOLEI'S PATH
         "Is that beer on the kitchen counter??":
-            "blank."
+            jump yolei_path
 
 
 
