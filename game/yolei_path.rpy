@@ -1,2 +1,3 @@
 label yolei_path:
-    "This is Yolei's path."
+    scene kitchen
+    "Emi takes a look at the kitchen counter."
