@@ -41,22 +41,29 @@ label path:
     #TODO: check for new music?
     scene workshop
     hide emi_annoyed
-    show emi_sigh at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+    show emi_sigh at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "{i}Sigh{/i}. At least they're gone, and I can finally close the shop!"
     hide emi_sigh 
     show emi_smirk at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "I'll have Master Baltazar treat me at the tavern once he's back. That's the least he can do!"
     hide emi_smirk
-    show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+    show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "Now, what should I do for the rest of the day?"
+    hide emi_neutral
 
     menu:
-        "What should I do?"
-        "Stay at the workshop and work on my babies of course!":
+        "Choose Emi's path."
+
+        #CRAFT PATH
+        "Craft the day away.":
             "blank."
+
+        #ARA's PATH
         "Take a stroll in the forest.":
             "blank."
-        "Wait... is that beer on the kitchen counter??":
+
+        #YOLEI'S PATH
+        "Is that beer on the kitchen counter??":
             "blank."
 
 
