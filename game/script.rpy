@@ -33,6 +33,8 @@
     e "And it wasn't such a big deal that they had to kick Wabee."
     e "{i}Nobody hurts Wabee.{/i}"
     e "..."
+    hide emi_annoyed
+    show emi_angry at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "{i}I hope they get attacked by a bugbear.{/i}"
     e "{i}Assholes.{/i}"
 
