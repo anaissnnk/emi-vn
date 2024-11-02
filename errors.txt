@@ -2,13 +2,59 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 56: expecting name after dot.
-    "blank".
-            ^
-
-File "game/script.rpy", line 59: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Wait... is that beer on the kitchen counter??"
-                                                   ^
+File "game/script.rpy", line 15: expected end of line
+(Perhaps you left out a " at the end of the first line.)
+    play voice voice/emi_laugh.wav"
+                                  ^
+        e "Indeed, I believe there would be nothing better than to enjoy a quiet peaceful morning..."
+    
+        hide emi_neutral
+        #TODO: stop chill music
+        e "... without having to face the consequences of waking up late when the shop was exceptionally open this morning."
+    
+        #TODO: add dramatic music
+        #TODO: add scene with chibi?
+    
+        scene workshop
+        show screen statButton
+        #TODO: add silly music
+        show emi_sad2 at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+        e "I know it was my fault for opening the shop late, but still..."
+        e "Those adventurers didn't have to be so mean."
+    
+        hide emi_sad2
+        show emi_annoyed at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+        e "And it wasn't such a big deal that they had to kick Wabee."
+        e "{i}Nobody hurts Wabee.{/i}"
+        e "..."
+        hide emi_annoyed
+        show emi_angry at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+        e "{i}I hope they get attacked by a bugbear.{/i}"
+        e "{i}Assholes.{/i}"
+    
+    
+    label path:
+        #TODO: check for new music?
+        scene workshop
+        hide emi_annoyed
+        show emi_sigh at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+        e "{i}Sigh{/i}. At least they're gone, and I can finally close the shop!"
+        hide emi_sigh 
+        show emi_smirk at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+        e "I'll have Master Baltazar treat me at the tavern once he's back. That's the least he can do!"
+        hide emi_smirk
+        show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+        e "Now, what should I do for the rest of the day?"
+        hide emi_neutral
+    
+        # menu:
+        #     "Choose Emi's path."
+    
+        #     #CRAFT PATH
+        #     "Craft the day away.":
+        #         jump craft_path
+    
+        #     #ARA's PATH
 
 Ren'Py Version: Ren'Py 8.3.3.24100702+nightly
-Mon Oct 21 19:44:06 2024
+Sat Nov  2 21:26:03 2024

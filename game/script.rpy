@@ -1,6 +1,7 @@
 ﻿label start:
     show border onlayer screens
     #TODO: add pensive music
+    play music "reflexion.mp3" fadein 0.5
 
     "My mom always made a fuss about my sleeping habits."
     "{i}\"There's nothing quite like enjoying a nice cup of tea and watching the sun rise.\"{/i}"
@@ -11,7 +12,7 @@
     #TODO: add chill music
     show screen statButton
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
-
+    voice "voice/emi_laugh.mp3"
     e "Indeed, I believe there would be nothing better than to enjoy a quiet peaceful morning..."
 
     hide emi_neutral
@@ -53,20 +54,20 @@ label path:
     e "Now, what should I do for the rest of the day?"
     hide emi_neutral
 
-    menu:
-        "Choose Emi's path."
+    # menu:
+    #     "Choose Emi's path."
 
-        #CRAFT PATH
-        "Craft the day away.":
-            jump craft_path
+    #     #CRAFT PATH
+    #     "Craft the day away.":
+    #         jump craft_path
 
-        #ARA's PATH
-        "Take a stroll in the forest.":
-            jump ara_path
+    #     #ARA's PATH
+    #     "Take a stroll in the forest.":
+    #         jump ara_path
 
-        #YOLEI'S PATH
-        "Is that beer on the kitchen counter??":
-            jump yolei_path
+    #     #YOLEI'S PATH
+    #     "Is that beer on the kitchen counter??":
+    #         jump yolei_path
 
 
 
