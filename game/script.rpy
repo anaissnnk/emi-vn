@@ -7,8 +7,9 @@
     "{i}\"I hope one day, you'll be able to enjoy the nice little things life has to offer.\"{/i}"
     "{i}\"Unlike the complete blockhead of a man I ended up marrying and who calls himself your father--\"{/i}"
 
-    scene workshop
+    scene workshop with dissolve
     show screen statButton
+    pause 0.3
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     voice "voice/emi_laugh.mp3"
     e "Indeed, I believe there would be nothing better than to enjoy a quiet peaceful morning..."
@@ -29,20 +30,23 @@
     e "And it wasn't such a big deal that they had to kick Wabee."
     play music "music/upbeat.mp3" fadein 0.5
     e "{i}Nobody hurts Wabee.{/i}"
+    e "{i}Who cares if your dagger is not repaired? I bet that stupid elf cannot aim!{/i}"
+    e "{i}Meyfyre... I'll remember you and your stupid hair.{/i}"
     e "..."
     hide emi_annoyed
     show emi_angry at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     voice "voice/emi_actually_brat2.mp3"
-    e "{i}I hope they get attacked by a bugbear.{/i}"
+    e "{i}I hope you and your group get attacked by a bugbear.{/i}"
     e "{i}Assholes.{/i}"
     stop music fadeout 0.5
 
 
 label path:
-    
     play music "music/eastfall.ogg" fadein 0.5
-    hide emi_annoyed
-    show emi_sigh at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    scene emi_room with dissolve
+    show screen statButton
+    pause 0.3
+    show emi_sigh at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     e "{i}Sigh{/i}. At least they're gone, and I can finally close the shop!"
     hide emi_sigh 
     show emi_smirk at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
