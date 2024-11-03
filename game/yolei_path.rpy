@@ -62,4 +62,20 @@ label unknown_bottle:
 
 
 label after_bottle:
-    "After the bottle scene."
+    show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+    e "Well, there's no beer but I could use a nice cup of tea!"
+    sound "sound/doorbell.mp3"
+    hide emi_neutral 
+    show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    e "Wait, why is the bell ringing? I'm sure I closed the door..."
+    e "..."
+    sound "sound/doorbell.mp3"
+    hide emi_surprised 
+    show emi_annoyed at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    e "Yolei."
+
+label yolei:
+    scene workshop with dissolve 
+    play music "music/upbeat.mp3" fadein 0.5
+    show emi_annoyed at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    show emi_annoyed at Transform(xpos = 0.05, ypos = 0.95, anchor = (1.0, 0.0), zoom = 0.8)
