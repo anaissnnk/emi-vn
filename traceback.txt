@@ -1,26 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/yolei_path.rpy", line 39, in script
-    $ bottleKnowledge = true
-  File "game/yolei_path.rpy", line 39, in <module>
-    $ bottleKnowledge = true
-NameError: name 'true' is not defined
+  File "game/yolei_path.rpy", line 67, in script
+    sound "sound/doorbell.mp3"
+Exception: Sayer 'sound' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/yolei_path.rpy", line 39, in script
-    $ bottleKnowledge = true
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 821, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/yolei_path.rpy", line 39, in <module>
-    $ bottleKnowledge = true
-NameError: name 'true' is not defined
+  File "game/yolei_path.rpy", line 67, in script
+    sound "sound/doorbell.mp3"
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 2573, in execute
+    Say.execute(self)
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 575, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 464, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'sound' is not defined.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.3.24100702+nightly
 Emi VN 1.0
-Sun Nov  3 17:30:41 2024
+Sun Nov  3 17:52:23 2024
