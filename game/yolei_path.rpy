@@ -32,7 +32,7 @@ label examine_bottle:
     pause 3.5
     hide dice
 
-    "You rolled a [dice_roll]. Your intelligence bonus is ([intelligence]) and your proficency is ([proficency]). The total is [total]."
+    "You rolled a [dice_roll]. Your intelligence bonus is ([intelligence]) and your expertise is ([expertise]). The total is [total]."
     e "Did that work?"
     jump after_bottle
 
