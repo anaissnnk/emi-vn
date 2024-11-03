@@ -10,6 +10,10 @@ label template:
     e "I'm standing on the left."
     hide emi_neutral
 
+    show emi_neutral at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8) with dissolve
+    e "I'm standing on the right."
+    hide emi_neutral
+
     e "The following is an ending pic slide test"
 
     hide screen statButton
