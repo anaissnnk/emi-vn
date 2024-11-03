@@ -1,6 +1,6 @@
 ﻿label start:
     show border onlayer screens
-    play music "reflexion.mp3" fadein 0.5
+    play music "music/reflexion.mp3" fadein 0.5
 
     "My mom always made a fuss about my sleeping habits."
     "{i}\"There's nothing quite like enjoying a nice cup of tea and watching the sun rise.\"{/i}"
@@ -14,23 +14,20 @@
     e "Indeed, I believe there would be nothing better than to enjoy a quiet peaceful morning..."
 
     hide emi_neutral
-    stop music
+    stop music fadeout 0.5
     e "... without having to face the consequences of waking up late when the shop was exceptionally open this morning."
 
-    #TODO: add dramatic music?
-    #TODO: add scene with chibi?
-
-    scene workshop
-    show screen statButton
-    #TODO: add silly music
-    show emi_sad2 at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    play music "music/tension.mp3"
+    show emi_sad2 at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     voice "voice/emi_why_neutral.mp3"
     e "I know it was my fault for opening the shop late, but still..."
     e "Those adventurers didn't have to be so mean."
 
     hide emi_sad2
+    stop music
     show emi_annoyed at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "And it wasn't such a big deal that they had to kick Wabee."
+    play music "music/upbeat.mp3" fadein 0.5
     e "{i}Nobody hurts Wabee.{/i}"
     e "..."
     hide emi_annoyed
@@ -38,10 +35,11 @@
     voice "voice/emi_actually_brat2.mp3"
     e "{i}I hope they get attacked by a bugbear.{/i}"
     e "{i}Assholes.{/i}"
+    stop music fadeout 0.5
 
 
 label path:
-    play music "eastfall.ogg" fadein 0.5
+    play music "music/eastfall.ogg" fadein 0.5
     scene workshop
     hide emi_annoyed
     show emi_sigh at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
