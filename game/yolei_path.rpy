@@ -50,6 +50,9 @@ label examine_bottle:
         hide emi_surprised
         jump after_bottle
 
+    elif dice_roll = 1
+        jump unknown_bottle
+
 
 label unknown_bottle:
     show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
