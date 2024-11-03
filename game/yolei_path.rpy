@@ -68,17 +68,18 @@ label after_bottle:
     hide emi_neutral 
     show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "?"
-    e "Wait, why is the bell ringing? I'm sure I closed the door..."
-    play sound "sound/doorbell.mp3"
+    e "Why is the bell ringing? I'm sure I closed the door..."
     e "..."
+    e "Dont tell me..."
     hide emi_surprised 
     show emi_annoyed at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    play sound "sound/doorbell.mp3"
     e "Yolei."
 
 
 label yolei:
     scene workshop with dissolve 
     play music "music/upbeat.mp3" fadein 0.5
-    show emi_annoyed at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
-    show emi_annoyed at Transform(xpos = 0.05, ypos = 0.95, anchor = (1.0, 0.0), zoom = 0.8)
-    "test"
+    show emi_annoyed at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+    show emi_neutral at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8) with dissolve
+    e "{i}Yup, that's him.{/i}"
