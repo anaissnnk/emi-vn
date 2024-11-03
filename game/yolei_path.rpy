@@ -7,8 +7,10 @@ label yolei_path:
     e "Let's see, I think it was around here..."
     e "Herbal influsion, sunflower seeds, some milk, an antidone, ..."
     voice "voice/emi_ok_neutral.wav"
-    e "There it is!"
     hide emi_neutral
+    show emi_happy at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    e "There it is!"
+    hide emi_happy
     show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     voice "voice/emi_what_confused.mp3"
     e "Wait, that's not beer."
@@ -35,14 +37,24 @@ label examine_bottle:
     "You rolled a [dice_roll]. Your intelligence bonus is ([intelligence]) and your expertise is ([expertise]). The total is [totalBottleCheck]."
     if totalBottleCheck > 5 and [dice_roll] != 1: 
         $ bottleKnowledge = true
-        
+        show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+        e "There's a note behind the bottle."
+        hide emi_neutral
+        show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+        e "Let's see... It's... a balding potion?"
+        voice "voice/emi_why_brat.mp3"
+        e "Why would Miss Elizabeth..."
+        e "..."
+        e "I guess all relationships are complicated."
         jump after_bottle
 
     elif totalBottleCheck < 5 or [dice_roll] = 1:
         jump unknown_bottle
 
 label unknown_bottle:
+    show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     e "I don't know what this is. It's better not to touch it."
+    hide emi_surprised
     jump after_bottle
 
 label after_bottle:
