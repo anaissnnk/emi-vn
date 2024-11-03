@@ -23,7 +23,7 @@ label yolei_path:
 
 
 label examine_bottle:
-    $ dice_roll, total = intelligence_expertise_check(intelligence, expertise)
+    $ dice_roll, totalBottleCheck = intelligence_expertise_check(intelligence, expertise)
     window hide
     pause 0.8
     show dice at Transform(zoom = 0.5) with dissolve:
@@ -32,17 +32,18 @@ label examine_bottle:
     pause 3.5
     hide dice
 
-    "You rolled a [dice_roll]. Your intelligence bonus is ([intelligence]) and your expertise is ([expertise]). The total is [total]."
-    e "Did that work?"
-    jump after_bottle
+    "You rolled a [dice_roll]. Your intelligence bonus is ([intelligence]) and your expertise is ([expertise]). The total is [totalBottleCheck]."
+    if totalBottleCheck > 5 and [dice_roll] != 1: 
+        $ bottleKnowledge = true
+        
+        jump after_bottle
 
-
+    elif totalBottleCheck < 5 or [dice_roll] = 1:
+        jump unknown_bottle
 
 label unknown_bottle:
-    e "Heh, better no touch it."
+    e "I don't know what this is. It's better not to touch it."
     jump after_bottle
-
-
 
 label after_bottle:
     "After the bottle scene."

@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/yolei_path.rpy", line 16: menu statement expects a non-empty block.
-    menu:
-        ^
-
-File "game/yolei_path.rpy", line 18: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    "Examine the bottle (Investigation).":
-    ^
+File "game/yolei_path.rpy", line 40: elif clause expects a non-empty block.
+    elif totalBottleCheck < 5:
+                              ^
 
 Ren'Py Version: Ren'Py 8.3.3.24100702+nightly
-Sun Nov  3 17:01:51 2024
+Sun Nov  3 17:18:15 2024
