@@ -1,5 +1,6 @@
 # Characters
 define e = Character("Emi")
+define y = Character("Yolei")
 
 #Backgrounds
 image dark_bg = ("#16171b")

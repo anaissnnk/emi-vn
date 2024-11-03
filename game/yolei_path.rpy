@@ -5,7 +5,7 @@ label yolei_path:
 
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     e "Let's see, I think it was around here..."
-    e "Herbal influsion, sunflower seeds, some milk, an antidone, ..."
+    e "Herbal influsion, sunflower seeds, some milk, a vial of antidote, leftover pies..."
     voice "voice/emi_ok_neutral.wav"
     hide emi_neutral
     show emi_happy at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
@@ -69,17 +69,25 @@ label after_bottle:
     show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "?"
     e "Why is the bell ringing? I'm sure I closed the door..."
-    e "..."
-    e "Dont tell me..."
-    hide emi_surprised 
-    show emi_annoyed at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     play sound "sound/doorbell.mp3"
-    e "Yolei."
+    e "..."
+    e "Could it be..."
+    hide emi_surprised 
+    show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    e "Yolei?"
 
 
 label yolei:
-    scene workshop with dissolve 
     play music "music/upbeat.mp3" fadein 0.5
-    show emi_annoyed at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
-    show emi_neutral at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8) with dissolve
+    scene workshop with dissolve 
+    show screen statButton
+    pause 0.3
+    show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+    show yolei_neutral at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8) with dissolve
     e "{i}Yup, that's him.{/i}"
+    voice "voice/emi_hello.mp3"
+    e "Hello hello."
+    hide yolei_neutral
+    show yolei_grin at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8)
+    y "Heya!"
+
