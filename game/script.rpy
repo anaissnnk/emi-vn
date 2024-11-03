@@ -1,6 +1,5 @@
 ﻿label start:
     show border onlayer screens
-    #TODO: add pensive music
     play music "reflexion.mp3" fadein 0.5
 
     "My mom always made a fuss about my sleeping habits."
@@ -9,23 +8,23 @@
     "{i}\"Unlike the complete blockhead of a man I ended up marrying and who calls himself your father--\"{/i}"
 
     scene workshop
-    #TODO: add chill music
     show screen statButton
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     voice "voice/emi_laugh.mp3"
     e "Indeed, I believe there would be nothing better than to enjoy a quiet peaceful morning..."
 
     hide emi_neutral
-    #TODO: stop chill music
+    stop music
     e "... without having to face the consequences of waking up late when the shop was exceptionally open this morning."
 
-    #TODO: add dramatic music
+    #TODO: add dramatic music?
     #TODO: add scene with chibi?
 
     scene workshop
     show screen statButton
     #TODO: add silly music
     show emi_sad2 at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    voice "voice/emi_why_neutral.mp3"
     e "I know it was my fault for opening the shop late, but still..."
     e "Those adventurers didn't have to be so mean."
 
@@ -36,38 +35,40 @@
     e "..."
     hide emi_annoyed
     show emi_angry at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    voice "voice/emi_actually_brat2.mp3"
     e "{i}I hope they get attacked by a bugbear.{/i}"
     e "{i}Assholes.{/i}"
 
 
 label path:
-    #TODO: check for new music?
+    play music "eastfall.ogg" fadein 0.5
     scene workshop
     hide emi_annoyed
     show emi_sigh at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "{i}Sigh{/i}. At least they're gone, and I can finally close the shop!"
     hide emi_sigh 
     show emi_smirk at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    voice "voice/emi_laugh2.mp3"
     e "I'll have Master Baltazar treat me at the tavern once he's back. That's the least he can do!"
     hide emi_smirk
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "Now, what should I do for the rest of the day?"
     hide emi_neutral
 
-    # menu:
-    #     "Choose Emi's path."
+    menu:
+        "Choose Emi's path."
 
-    #     #CRAFT PATH
-    #     "Craft the day away.":
-    #         jump craft_path
+        #CRAFT PATH
+        "Craft the day away.":
+            jump craft_path
 
-    #     #ARA's PATH
-    #     "Take a stroll in the forest.":
-    #         jump ara_path
+        #ARA's PATH
+        "Take a stroll in the forest.":
+            jump ara_path
 
-    #     #YOLEI'S PATH
-    #     "Is that beer on the kitchen counter??":
-    #         jump yolei_path
+        #YOLEI'S PATH
+        "Is that beer on the kitchen counter??":
+            jump yolei_path
 
 
 
