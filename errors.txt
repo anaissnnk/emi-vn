@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/yolei_path.rpy", line 40: elif clause expects a non-empty block.
-    elif totalBottleCheck < 5:
-                              ^
+File "game/yolei_path.rpy", line 54: reached end of line when expecting ':'.
+    elif dice_roll = 1
+                      ^
 
 Ren'Py Version: Ren'Py 8.3.3.24100702+nightly
-Sun Nov  3 17:18:15 2024
+Sun Nov  3 17:42:42 2024

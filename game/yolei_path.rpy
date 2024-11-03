@@ -35,22 +35,22 @@ label examine_bottle:
     hide dice
 
     "You rolled a [dice_roll]. Your intelligence bonus is ([intelligence]) and your expertise is ([expertise]). The total is [totalBottleCheck]."
-    if totalBottleCheck > 5 and dice_roll != 1: 
+    if dice_roll != 1 and totalBottleCheck > 5: 
         $ bottleKnowledge = True
+
         show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
         e "There's a note behind the bottle."
         hide emi_neutral
         show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
         voice "voice/emi_what_confused.mp3"
         e "Let's see... It's... a balding potion?"
-        voice "voice/emi_why_brat.mp3"
         e "Why would Miss Elizabeth..."
         e "..."
         e "I guess all relationships are complicated."
         hide emi_surprised
         jump after_bottle
 
-    elif dice_roll = 1
+    elif dice_roll = 1:
         jump unknown_bottle
 
 
@@ -59,6 +59,7 @@ label unknown_bottle:
     e "I don't know what this is. It's better not to touch it."
     hide emi_surprised
     jump after_bottle
+
 
 label after_bottle:
     "After the bottle scene."
