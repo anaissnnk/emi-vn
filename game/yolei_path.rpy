@@ -57,6 +57,7 @@ label examine_bottle:
 label unknown_bottle:
     show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     e "I don't know what this is. It's better not to touch it."
+    $ bottleKnowledge = False
     hide emi_surprised
     jump after_bottle
 
@@ -118,7 +119,11 @@ label yolei:
     hide emi_sigh 
 
     menu:
+    "Do I have a different drink for Yolei?"
         "Bitter warm water only.":
+            jump no_yolei_ending 
+
+        "Nope.":
             jump no_yolei_ending 
             
         "Make him drink the potion I found" if bottleKnowledge:

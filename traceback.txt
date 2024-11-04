@@ -1,24 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/yolei_path.rpy", line 67, in script
-    sound "sound/doorbell.mp3"
-Exception: Sayer 'sound' is not defined.
+  File "game/yolei_path.rpy", line 121, in script
+    menu:
+SyntaxError: invalid syntax (game/yolei_path.rpy, line 125)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/yolei_path.rpy", line 67, in script
-    sound "sound/doorbell.mp3"
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 2573, in execute
-    Say.execute(self)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 575, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 464, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'sound' is not defined.
+  File "game/yolei_path.rpy", line 121, in script
+    menu:
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 1619, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\exports\menuexports.py", line 100, in menu
+    condition = renpy.python.py_eval(condition)
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\python.py", line 1207, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\python.py", line 1144, in py_compile
+    raise e
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\python.py", line 1081, in py_compile
+    raise orig_e
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\python.py", line 1073, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (game/yolei_path.rpy, line 125)
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.3.24100702+nightly
 Emi VN 1.0
-Sun Nov  3 17:52:23 2024
+Mon Nov  4 17:52:23 2024
