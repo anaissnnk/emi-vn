@@ -62,8 +62,9 @@ label unknown_bottle:
 
 
 label after_bottle:
-    show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     e "Well, there's no beer but I could use a nice cup of tea!"
+    e "Where's my cup--"
     play sound "sound/doorbell.mp3"
     hide emi_neutral 
     show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
@@ -88,6 +89,49 @@ label yolei:
     voice "voice/emi_hello.mp3"
     e "Hello hello."
     hide yolei_neutral
-    show yolei_grin at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8)
+    show yolei_smile at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8)
     y "Heya!"
+    e "Hiding from the circus again?"
+    hide yolei_smile
+    show yolei_grin
+    y "I'm not hiding from them. I'm {i}avoiding{/i} them."
+    hide emi_neutral
+    show emi_surprised 
+    e "Sure, whatever you say..."
+    hide yolei_grin 
+    show yolei_neutral 
+    y "Whatcha doing today? Where's the roommate?"
+    hide emi_surprised 
+    show emi_neutral 
+    e "Beats me. Ara probably went to the forest."
+    e "{i}Her new hobby is hunting for food so...{/i}"
+    e "And I was just having tea."
+    hide yolei_neutral 
+    show yolei_bored
+    y "You're drinking bitter warm water again?"
+    hide emi_neutral 
+    show emi_sigh 
+    e "It's {i}tea{/i}."
+    y "Myeah. Whatever {i}you{/i} say."
+    y "Don't you have something different? Something more... {i}interesting{/i}?"
+    hide yolei_bored 
+    hide emi_sigh 
+
+    menu:
+        "Bitter warm water only.":
+            jump no_yolei_ending 
+
+        if $ bottleKnowledge = True
+            "Make him drink the potion I found":
+            jump yolei_bald_path
+
+
+label no_yolei_ending:
+    "Failed Yolei ending path."
+
+
+label yolei_bald_path:
+    "Bald Yolei ending"
+
+
 
