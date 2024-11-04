@@ -3,6 +3,7 @@
     play music "music/reflexion.mp3" fadein 0.5
 
     "My mom always made a fuss about my sleeping habits."
+    "{i}\"Oh my. You're only waking up now?\"{/i}"
     "{i}\"There's nothing quite like enjoying a nice cup of tea and watching the sun rise.\"{/i}"
     "{i}\"I hope one day, you'll be able to enjoy the nice little things life has to offer.\"{/i}"
     "{i}\"Unlike the complete blockhead of a man I ended up marrying and who calls himself your father--\"{/i}"
@@ -13,6 +14,8 @@
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     voice "voice/emi_laugh.mp3"
     e "Indeed, I believe there would be nothing better than to enjoy a quiet peaceful morning..."
+    e "Peacefully quietly..."
+    e "Starting the day slowly..."
 
     hide emi_neutral
     stop music fadeout 0.5
