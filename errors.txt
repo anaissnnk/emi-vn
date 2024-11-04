@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/yolei_path.rpy", line 125: expected menuitem
-    if bottleKnowledge = True "Make him drink the potion I found":
-    ^
+File "game/yolei_path.rpy", line 122: end of line expected.
+    e "Do I have a different drink for Yolei?".
+                                              ^
 
 Ren'Py Version: Ren'Py 8.3.3.24100702+nightly
-Mon Nov  4 17:53:03 2024
+Mon Nov  4 18:01:40 2024

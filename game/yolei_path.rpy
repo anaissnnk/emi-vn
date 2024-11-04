@@ -5,7 +5,7 @@ label yolei_path:
 
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     e "Let's see, I think it was around here..."
-    e "Herbal influsion, sunflower seeds, some milk, a vial of antidote, leftover pies..."
+    e "Herbal influsion, sunflower seeds, experimental poison, experimental toxine, a vial of antidote, ..."
     voice "voice/emi_ok_neutral.wav"
     hide emi_neutral
     show emi_happy at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
@@ -119,7 +119,8 @@ label yolei:
     hide emi_sigh 
 
     menu:
-    "Do I have a different drink for Yolei?"
+        "Do I have a different drink for Yolei?"
+
         "Bitter warm water only.":
             jump no_yolei_ending 
 
