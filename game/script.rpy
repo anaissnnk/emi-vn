@@ -21,7 +21,20 @@
     stop music fadeout 0.5
     e "... without having to face the consequences of waking up late when the shop was exceptionally open this morning."
 
+    # sad chibi slide
     play music "music/tension.mp3" fadein 0.5
+    hide screen statButton
+    scene dark_bg
+    window hide
+    pause 0.8
+    show emi_chibi_sad at Transform(zoom = 0.6) with dissolve:
+        truecenter
+    pause 3.0
+    hide emi_chibi_sad
+
+    # return to screen
+    scene workshop with dissolve
+    show screen statButton
     show emi_sad2 at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     voice "voice/emi_why_neutral.mp3"
     e "I know it was my fault for opening the shop late, but still..."
