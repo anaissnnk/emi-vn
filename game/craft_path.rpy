@@ -12,7 +12,7 @@ label craft_path:
     scene dark_bg with dissolve
     window hide
     pause 0.8
-    show craft_ending at Transform(zoom = 0.6) with dissolve:
+    show craft_ending at Transform(zoom = 0.7) with dissolve:
         truecenter
     pause 3.0
     hide craft_ending
@@ -24,6 +24,7 @@ label craft_path:
     hide emi_neutral
     show emi_happy at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "{i}Wabee is still a bit wobbly, but he can fly properly now.{/i}"
+    voice "voice/emi_laugh2.mp3"
     e "{i}One day, I'm sure I'll be able to make him spit fire!{/i}"
     "Congrats! You've reached the craft ending!"
     "Will you be able to reach Ara's and Yolei's ending too?"
