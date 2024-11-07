@@ -122,6 +122,7 @@ label yolei:
     y "Don't you have something different? Something more... {i}interesting{/i}?"
     hide yolei_bored 
     hide emi_sigh 
+    hide screen statButton
 
     menu:
         "Do I have a different drink for Yolei?"
