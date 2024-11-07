@@ -153,6 +153,14 @@ label no_yolei_ending:
     e "That's not--"
     hide yolei_grin
     show yolei_grin at slide_out_right
+    pause 0.4
+    hide emi_surprised
+    show emi_sigh at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    e "And he's gone."
+    hide emi_sigh 
+    show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    e "Guess I'll just spend some nice alone time today."
+    jump craft_path
 
 
     
