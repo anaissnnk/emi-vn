@@ -23,13 +23,13 @@
 
     # sad chibi slide
     hide screen statButton
-    scene dark_bg
+    scene dark_bg with dissolve
     play music "music/tension.mp3" fadein 0.5
     window hide
     pause 0.8
     show emi_chibi_sad at Transform(zoom = 0.7) with dissolve:
         truecenter
-    pause 3.0
+    pause 2.5
     hide emi_chibi_sad
 
     # return to screen
