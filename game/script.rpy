@@ -34,7 +34,7 @@
     play music "music/upbeat.mp3" fadein 0.5
     e "{i}Nobody hurts Wabee.{/i}"
     e "{i}Who cares if your dagger is not repaired? I bet that stupid elf cannot aim!{/i}"
-    e "{i}Meyfyre... I'll remember you and your stupid hair.{/i}"
+    e "{i}Meyfyre... I'll remember you and your stupid friends.{/i}"
     e "..."
     hide emi_annoyed
     show emi_angry at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)

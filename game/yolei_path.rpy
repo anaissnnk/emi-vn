@@ -5,10 +5,11 @@ label yolei_path:
 
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     e "Let's see, I think it was around here..."
-    e "Herbal influsion, sunflower seeds, experimental poison, experimental toxine, a vial of antidote, ..."
-    voice "voice/emi_ok_neutral.wav"
+    e "Herbal influsion, sunflower seeds, rose perfurme, some milk, a vial of antidote, ..."
+    voice "voice/emi_ok_calm.mp3"
     hide emi_neutral
     show emi_happy at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    voice "voice/emi_laugh2.mp3"
     e "There it is!"
     hide emi_happy
     show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
@@ -42,7 +43,7 @@ label examine_bottle:
         e "There's a note behind the bottle."
         hide emi_neutral
         show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
-        voice "voice/emi_what_confused.mp3"
+        voice "voice/emi_why_brat.mp3"
         e "Let's see... It's... a balding potion?"
         e "Why would Miss Elizabeth..."
         e "..."
