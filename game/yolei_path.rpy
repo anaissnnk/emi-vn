@@ -59,6 +59,7 @@ label examine_bottle:
 
 
 label unknown_bottle:
+    show screen statButton
     show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     e "I don't know what this is. It's better not to touch it."
     $ bottleKnowledge = False
