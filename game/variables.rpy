@@ -2,8 +2,24 @@
 define e = Character("Emi")
 define y = Character("Yolei")
 
-#Backgrounds
+# Backgrounds
 image dark_bg = ("#16171b")
+
+# Animation
+transform slide_out_right:
+    xpos 0.95 
+    ypos 0.95
+    anchor (1.0, 1.0)
+    zoom 0.8
+    linear 1.0 xpos 1.5 
+
+transform slide_in_right:
+    xpos 1.5 
+    ypos 0.95
+    anchor (1.0, 1.0)
+    zoom 0.8
+    linear 1.0 xpos 0.95 
+
 
 # Stats variables
 $ strength = 1
