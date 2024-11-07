@@ -91,6 +91,7 @@ label yolei:
     pause 0.3
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     show yolei_neutral at slide_in_right with dissolve
+    pause 0.4
     e "{i}Yup, that's him.{/i}"
     voice "voice/emi_hello.mp3"
     e "Hello hello."
