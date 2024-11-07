@@ -59,6 +59,7 @@ label path:
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "Now, what should I do for the rest of the day?"
     hide emi_neutral
+    hide screen statButton
 
     menu:
         "Choose Emi's path."

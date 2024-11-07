@@ -16,6 +16,7 @@ label yolei_path:
     voice "voice/emi_what_confused.mp3"
     e "Wait, that's not beer."
     hide emi_surprised
+    hide screen statButton
 
     menu:
         e "What is this?"
@@ -26,6 +27,7 @@ label yolei_path:
 
 
 label examine_bottle:
+    hide screen statButton
     $ dice_roll, totalBottleCheck = intelligence_expertise_check(intelligence, expertise)
     window hide
     pause 0.8
@@ -39,6 +41,7 @@ label examine_bottle:
     if dice_roll != 1 and totalBottleCheck > 5: 
         $ bottleKnowledge = True
 
+        show screen statButton
         show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
         e "There's a note behind the bottle."
         hide emi_neutral
