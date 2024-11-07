@@ -82,6 +82,7 @@ label after_bottle:
     hide emi_surprised 
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "Yolei?"
+    stop music fadeout 0.5
 
 
 label yolei:
@@ -160,11 +161,9 @@ label no_yolei_ending:
     hide emi_sigh 
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "Guess I'll just spend some nice alone time today."
+    stop music fadeout 0.5
     jump craft_path
 
-
-    
-    
 
 
 label yolei_bald_path:
