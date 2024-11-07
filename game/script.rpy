@@ -29,7 +29,7 @@
     pause 0.8
     show emi_chibi_sad at Transform(zoom = 0.7) with dissolve:
         truecenter
-    pause 2.5
+    pause 1.8
     hide emi_chibi_sad
 
     # return to screen
