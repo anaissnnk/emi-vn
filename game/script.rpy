@@ -39,8 +39,8 @@
     voice "voice/emi_why_neutral.mp3"
     e "I know it was my fault for opening the shop late, but still..."
     e "Those adventurers didn't have to be so mean."
-
     hide emi_sad2
+    
     stop music fadeout 0.5
     show emi_annoyed at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "And it wasn't such a big deal that they had to kick Wabee."
