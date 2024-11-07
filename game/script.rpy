@@ -72,7 +72,7 @@ label path:
             jump ara_path
 
         #YOLEI'S PATH
-        "Is that beer on the kitchen counter??":
+        "Is that beer on the kitchen counter?":
             jump yolei_path
 
             

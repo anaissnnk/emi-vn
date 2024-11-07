@@ -43,8 +43,8 @@ label examine_bottle:
         e "There's a note behind the bottle."
         hide emi_neutral
         show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
-        voice "voice/emi_why_brat.mp3"
         e "Let's see... It's... a balding potion?"
+        voice "voice/emi_why_neutral.mp3"
         e "Why would Miss Elizabeth..."
         e "..."
         e "I guess all relationships are complicated."
