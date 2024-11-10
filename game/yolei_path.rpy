@@ -132,7 +132,7 @@ label yolei:
     hide emi_sigh 
     hide screen statButton
 
-    menu:
+    menu yolei_ending_choice:
         e "Do I have a different drink for Yolei?"
 
         "Bitter warm water only.":
@@ -175,8 +175,10 @@ label no_yolei_ending:
 
 
 label yolei_bald_path:
-    show screen statButton
-    "Bald Yolei ending"
+    "Hey there, this part is not available yet!"
+    "I'll bring you back."
+    jump yolei_ending_choice
+
 
 
 

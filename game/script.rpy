@@ -61,7 +61,7 @@ label path:
     hide emi_neutral
     hide screen statButton
 
-    menu:
+    menu path_menu:
         "Choose Emi's path."
 
         #CRAFT PATH
