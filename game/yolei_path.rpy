@@ -113,6 +113,7 @@ label yolei:
     y "Whatcha doing today? Where's the roommate?"
     hide emi_surprised 
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    voice "voice/emi/emi_actually_neutral.mp3"
     e "I don't know. She had already left when I woke up."
     e "{i}Ara's new hobby is food hunting, so maybe she went to the forest?{/i}"
     e "And I was just having tea."
@@ -121,6 +122,7 @@ label yolei:
     y "You're drinking bitter warm water again?"
     hide emi_neutral 
     show emi_sigh at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    voice "voice/emi/emi_how.mp3"
     e "It's {i}tea{/i}."
     y "Sure. Whatever {i}you{/i} say."
     voice "voice/yolei/yolei_confused.mp3"
@@ -146,6 +148,7 @@ label no_yolei_ending:
     show screen statButton
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     show yolei_bored at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8)
+    voice "voice/emi/emi_laugh.mp3"
     e "Sadly, I only have bitter warm water that smells like flower."
     voice "voice/yolei/yolei_disappointed.mp3"
     y "Boring. I'm gonna get a {i}real{/i} drink outside."
@@ -166,6 +169,7 @@ label no_yolei_ending:
     hide emi_sigh 
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "Guess I'll just spend some nice alone time today."
+    voice "voice/emi/emi_actually_neutral.mp3"
     stop music fadeout 0.5
     jump craft_path
 
