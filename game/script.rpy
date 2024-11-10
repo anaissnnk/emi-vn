@@ -12,7 +12,7 @@
     show screen statButton
     pause 0.3
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
-    voice "voice/emi_laugh.mp3"
+    voice "voice/emi/emi_laugh.mp3"
     e "Indeed, I believe there would be nothing better than to enjoy a quiet peaceful morning..."
     e "Peacefully quietly..."
     e "Starting the day slowly..."
@@ -21,22 +21,8 @@
     stop music fadeout 0.5
     e "... without having to face the consequences of waking up late when the shop was exceptionally open this morning."
 
-    # sad chibi slide
-    hide screen statButton
-    scene dark_bg with dissolve
-    play music "music/tension.mp3" fadein 0.5
-    window hide
-    pause 0.8
-    show emi_chibi_sad at Transform(zoom = 0.7) with dissolve:
-        truecenter
-    pause 1.8
-    hide emi_chibi_sad
-
-    # return to screen
-    scene workshop with dissolve
-    show screen statButton
     show emi_sad2 at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
-    voice "voice/emi_why_neutral.mp3"
+    voice "voice/emi/emi_why_neutral.mp3"
     e "I know it was my fault for opening the shop late, but still..."
     e "Those adventurers didn't have to be so mean."
     hide emi_sad2
@@ -51,7 +37,7 @@
     e "..."
     hide emi_annoyed
     show emi_angry at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
-    voice "voice/emi_actually_brat2.mp3"
+    voice "voice/emi/emi_actually_brat2.mp3"
     e "{i}I hope you and your group get attacked by a bugbear.{/i}"
     e "{i}Assholes.{/i}"
     stop music fadeout 0.5
@@ -66,7 +52,7 @@ label path:
     e "{i}Sigh{/i}. At least they're gone, and I can finally close the shop!"
     hide emi_sigh 
     show emi_smirk at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
-    voice "voice/emi_laugh2.mp3"
+    voice "voice/emi/emi_laugh2.mp3"
     e "I'll have Master Baltazar treat me at the tavern once he's back. That's the least he can do!"
     hide emi_smirk
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)

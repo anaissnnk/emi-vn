@@ -6,14 +6,14 @@ label yolei_path:
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     e "Let's see, I think it was around here..."
     e "Herbal influsion, sunflower seeds, rose perfurme, some milk, a vial of antidote, ..."
-    voice "voice/emi_ok_calm.mp3"
+    voice "voice/emi/emi_ok_calm.mp3"
     hide emi_neutral
     show emi_happy at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
-    voice "voice/emi_laugh2.mp3"
+    voice "voice/emi/emi_laugh2.mp3"
     e "There it is!"
     hide emi_happy
     show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
-    voice "voice/emi_what_confused.mp3"
+    voice "voice/emi/emi_what_confused.mp3"
     e "Wait, that's not beer."
     hide emi_surprised
     hide screen statButton
@@ -47,7 +47,7 @@ label examine_bottle:
         hide emi_neutral
         show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
         e "Let's see... It's... a balding potion?"
-        voice "voice/emi_why_neutral.mp3"
+        voice "voice/emi/emi_why_neutral.mp3"
         e "Why would Miss Elizabeth..."
         e "..."
         e "I guess all relationships are complicated."
@@ -94,7 +94,7 @@ label yolei:
     show yolei_neutral at slide_in_right with dissolve
     pause 0.4
     e "{i}Yup, that's him.{/i}"
-    voice "voice/emi_hello.mp3"
+    voice "voice/emi/emi_hello.mp3"
     e "Hello hello."
     hide yolei_neutral
     show yolei_smile at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8)
