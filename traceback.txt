@@ -1,19 +1,17 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/yolei_path.rpy", line 121, in script
-    menu:
-SyntaxError: invalid syntax (game/yolei_path.rpy, line 125)
+  File "game/yolei_path.rpy", line 41, in script
+    if dice_roll != 1 and totalBottleCheck > 5:
+SyntaxError: invalid syntax (game/yolei_path.rpy, line 57)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/yolei_path.rpy", line 121, in script
-    menu:
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 1619, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\exports\menuexports.py", line 100, in menu
-    condition = renpy.python.py_eval(condition)
+  File "game/yolei_path.rpy", line 41, in script
+    if dice_roll != 1 and totalBottleCheck > 5:
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 1843, in execute
+    if renpy.python.py_eval(condition):
   File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\python.py", line 1207, in py_eval
     code = py_compile(code, 'eval')
   File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\python.py", line 1144, in py_compile
@@ -22,9 +20,9 @@ Full traceback:
     raise orig_e
   File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\python.py", line 1073, in py_compile
     tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: invalid syntax (game/yolei_path.rpy, line 125)
+SyntaxError: invalid syntax (game/yolei_path.rpy, line 57)
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.3.24100702+nightly
 Emi VN 1.0
-Mon Nov  4 17:52:23 2024
+Sun Nov 10 13:45:23 2024

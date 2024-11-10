@@ -54,7 +54,7 @@ label examine_bottle:
         hide emi_surprised
         jump after_bottle
 
-    elif dice_roll = 1:
+    elif dice_roll == 1:
         jump unknown_bottle
 
 
