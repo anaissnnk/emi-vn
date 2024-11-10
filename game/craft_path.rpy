@@ -3,9 +3,9 @@ label craft_path:
     show screen statButton
     pause 0.3
     #TODO: chang music?
-    play music "music/eastfall.ogg" fadein 0.5
+    play music "music/craft_time.mp3" fadein 0.5
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
-    e "{i}I spent the day thinkering away.{/i}"
+    e "{i}I spent the rest of the day thinkering away.{/i}"
     e "{i}Time flew by so quickly, and I made a lot of progress!{/i}"
     hide emi_neutral
 
