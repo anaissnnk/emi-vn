@@ -21,6 +21,7 @@
     stop music fadeout 0.5
     e "... without having to face the consequences of waking up late when the shop was exceptionally open this morning."
 
+    play music "music/tension.mp3" fadein 0.5
     show emi_sad2 at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     voice "voice/emi/emi_why_neutral.mp3"
     e "I know it was my fault for opening the shop late, but still..."
