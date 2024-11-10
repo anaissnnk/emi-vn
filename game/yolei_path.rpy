@@ -119,6 +119,7 @@ label yolei:
     e "And I was just having tea."
     hide yolei_neutral 
     show yolei_bored at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8)
+    voice "voice/yolei/yolei_confused.mp3"
     y "You're drinking bitter warm water again?"
     hide emi_neutral 
     show emi_sigh at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
@@ -148,7 +149,6 @@ label no_yolei_ending:
     show screen statButton
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     show yolei_bored at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8)
-    voice "voice/emi/emi_laugh.mp3"
     e "Sadly, I only have bitter warm water that smells like flower."
     voice "voice/yolei/yolei_disappointed.mp3"
     y "Boring. I'm gonna get a {i}real{/i} drink outside."
