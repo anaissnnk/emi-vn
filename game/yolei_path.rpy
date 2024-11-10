@@ -99,10 +99,12 @@ label yolei:
     hide yolei_neutral
     show yolei_smile at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8)
     y "Hey!"
+    voice "voice/yolei/yolei_hum.mp3"
     e "Hiding from the circus again?"
     hide yolei_smile
     show yolei_grin at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8)
     y "I'm not hiding from them. I'm {i}avoiding{/i} them."
+    voice "voice/yolei/yolei_laugh.mp3"
     hide emi_neutral
     show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "Sure, whatever you say..."
