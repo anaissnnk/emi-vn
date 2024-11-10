@@ -46,7 +46,7 @@ label examine_bottle:
         e "There's a note behind the bottle."
         hide emi_neutral
         show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
-        e "Let's see... It's... a balding potion?"
+        e "Let's see... It's a balding potion?"
         voice "voice/emi/emi_why_neutral.mp3"
         e "Why would Miss Elizabeth..."
         e "..."
@@ -98,13 +98,13 @@ label yolei:
     e "Hello hello."
     hide yolei_neutral
     show yolei_smile at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8)
-    y "Hey!"
     voice "voice/yolei/yolei_hum.mp3"
+    y "Hey!"
     e "Hiding from the circus again?"
     hide yolei_smile
     show yolei_grin at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8)
-    y "I'm not hiding from them. I'm {i}avoiding{/i} them."
     voice "voice/yolei/yolei_laugh.mp3"
+    y "I'm not hiding from them. I'm {i}avoiding{/i} them."
     hide emi_neutral
     show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "Sure, whatever you say..."
@@ -123,8 +123,8 @@ label yolei:
     show emi_sigh at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "It's {i}tea{/i}."
     y "Sure. Whatever {i}you{/i} say."
-    y "Do you have something else to drink? Something more {i}interesting{/i}?"
     voice "voice/yolei/yolei_confused.mp3"
+    y "Do you have something else to drink? Something more {i}interesting{/i}?"
     hide yolei_bored 
     hide emi_sigh 
     hide screen statButton
@@ -147,15 +147,15 @@ label no_yolei_ending:
     show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     show yolei_bored at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8)
     e "Sadly, I only have bitter warm water that smells like flower."
-    y "Boring. I'm gonna get a {i}real{/i} drink outside."
     voice "voice/yolei/yolei_disappointed.mp3"
+    y "Boring. I'm gonna get a {i}real{/i} drink outside."
     hide emi_neutral
     show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "Milk?"
     hide yolei_bored
     show yolei_grin at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8)
-    y "Your words, not mine."
     voice "voice/yolei/yolei_victorious.mp3"
+    y "Your words, not mine."
     e "That's not--"
     hide yolei_grin
     show yolei_grin at slide_out_right
