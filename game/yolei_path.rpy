@@ -197,13 +197,13 @@ label yolei_bald_path:
         "Perhaps this is a bad idea.":
             e "{i}I decided against making him drink the position, and Yolei just went home.{/i}"
             jump craft_ending
-    
-        
 
 
-    "Hey there, this part is not available yet!"
-    "I'll bring you back."
-    jump yolei_ending_choice
+label balding_potion_check:
+'under construction'
+
+label yolei_bald_ending:
+'under construction'
 
 
 
