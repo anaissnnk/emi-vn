@@ -140,7 +140,7 @@ label yolei:
 
         "Nope.":
             jump no_yolei_ending 
-            
+    
         "Make him drink the potion I found" if bottleKnowledge:
             jump yolei_bald_path
 
@@ -175,6 +175,32 @@ label no_yolei_ending:
 
 
 label yolei_bald_path:
+    show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
+    show yolei_grin at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8)
+    voice "voice/emi/emi_actually_brat.mp3"
+    e "I found something, but..."
+    e "I'm not sure you'd like it."
+    voice "voice/yolei/yolei_victorious.mp3"
+    y "Oooh? What's this?"
+    y "Nothing weird, right?"
+        hide screen statButton
+
+        menu yolei_ending_choice:
+        e "Should I convince him to drink it?"
+
+        "I don't know what this is (Deception).":
+            jump balding_potion_check 
+
+        "I don't know what this is." if unknown_bottle:
+            jump yolei_bald_ending
+
+        "Perhaps this is a bad idea.":
+            e "{i}I decided against making him drink the position, and Yolei just went home.{/i}"
+            jump craft_ending
+    
+        
+
+
     "Hey there, this part is not available yet!"
     "I'll bring you back."
     jump yolei_ending_choice
