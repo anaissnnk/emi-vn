@@ -1,17 +1,19 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/yolei_path.rpy", line 41, in script
-    if dice_roll != 1 and totalBottleCheck > 5:
-SyntaxError: invalid syntax (game/yolei_path.rpy, line 57)
+  File "game/yolei_path.rpy", line 188, in script
+    menu yolei_drinks_potions:
+SyntaxError: invalid syntax (game/yolei_path.rpy, line 191)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/yolei_path.rpy", line 41, in script
-    if dice_roll != 1 and totalBottleCheck > 5:
-  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 1843, in execute
-    if renpy.python.py_eval(condition):
+  File "game/yolei_path.rpy", line 188, in script
+    menu yolei_drinks_potions:
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\ast.py", line 1619, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\exports\menuexports.py", line 100, in menu
+    condition = renpy.python.py_eval(condition)
   File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\python.py", line 1207, in py_eval
     code = py_compile(code, 'eval')
   File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\python.py", line 1144, in py_compile
@@ -20,9 +22,9 @@ Full traceback:
     raise orig_e
   File "C:\Users\anais\Downloads\renpy\renpy-8.1.1-sdk\renpy\python.py", line 1073, in py_compile
     tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: invalid syntax (game/yolei_path.rpy, line 57)
+SyntaxError: invalid syntax (game/yolei_path.rpy, line 191)
 
-Windows-10-10.0.22631 AMD64
+Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.3.24100702+nightly
 Emi VN 1.0
-Sun Nov 10 13:45:23 2024
+Mon Jun  9 12:27:46 2025

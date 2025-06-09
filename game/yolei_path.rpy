@@ -62,7 +62,7 @@ label unknown_bottle:
     show screen statButton
     show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     e "I don't know what this is. It's better not to touch it."
-    $ bottleKnowledge = False
+    $ unknownBottle = True
     hide emi_surprised
     jump after_bottle
 
@@ -141,8 +141,8 @@ label yolei:
         "Nope.":
             jump no_yolei_ending 
     
-        "Make him drink the potion I found" if bottleKnowledge:
-            jump yolei_bald_path
+        "Maybe?":
+            jump yolei_drinks_potions
 
 
 label no_yolei_ending:
@@ -183,15 +183,17 @@ label yolei_bald_path:
     voice "voice/yolei/yolei_victorious.mp3"
     y "Oooh? What's this?"
     y "Nothing weird, right?"
-        hide screen statButton
+    hide screen statButton
 
-        menu yolei_ending_choice:
-        e "Should I convince him to drink it?"
+    menu yolei_drinks_potions:
+        e "Should I convince him to drink the potion I found??"
 
-        "I don't know what this is (Deception).":
-            jump balding_potion_check 
+        TODO: #correct
+        "I don't know what this is (Deception)." if bottleKnowledge = True:
+            jump balding_potion_check
 
-        "I don't know what this is." if unknown_bottle:
+        TODO: #correct
+        "I don't know what this is." if unknownBottle = True:
             jump yolei_bald_ending
 
         "Perhaps this is a bad idea.":

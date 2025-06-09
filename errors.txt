@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 64: expected menuitem
-    hide screen statButton
+File "game/yolei_path.rpy", line 191: expected menuitem
+    if bottleKnowledge = True
     ^
 
 Ren'Py Version: Ren'Py 8.3.3.24100702+nightly
-Thu Nov  7 21:03:53 2024
+Mon Jun  9 12:29:48 2025
