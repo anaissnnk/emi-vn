@@ -196,7 +196,7 @@ label yolei_bald_path:
 
 label balding_potion_check:
     hide screen statButton
-    $ lie_dice_roll = deception_check_yolei (charisma)
+    $ lie_dice_roll, lieToYolei = deception_check_yolei (charisma)
     window hide
     pause 0.8
     show dice at Transform(zoom = 0.5) with dissolve:
@@ -206,7 +206,7 @@ label balding_potion_check:
     hide dice
 
     "You rolled a [lie_dice_roll]. Your charisma bonus is ([charisma]). The total is [lieToYolei]."
-    if lie_dice_roll != 1 and lie_dice_roll > 10: 
+    if lie_dice_roll != 1 and lieToYolei > 10: 
         $ lieSuccessful = True
         jump yolei_bald_success
 
