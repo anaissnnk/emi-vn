@@ -39,8 +39,8 @@ label examine_bottle:
 
     "You rolled a [bottle_dice_roll]. Your intelligence bonus is ([intelligence]) and your expertise is ([expertise]). The total is [totalBottleCheck]."
     if bottle_dice_roll != 1 and totalBottleCheck > 5: 
-        $ bottleKnowledge = True
-
+        return bottleKnowledge = True
+        e 'bottleKnowledge is ([bottleKnowledge])'
         show screen statButton
         show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
         e "There's a note behind the bottle."
@@ -55,13 +55,17 @@ label examine_bottle:
         jump after_bottle
 
     elif bottle_dice_roll == 1:
+        return bottleKnowledge = False
+        e 'bottleKnowledge is ([bottleKnowledge])'
         jump unknown_bottle
 
 
 label unknown_bottle:
     show screen statButton
     show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+    return bottleKnowledge = False
     e "I don't know what this is. It's better not to touch it."
+    e 'bottleKnowledge is ([bottleKnowledge])'
     hide emi_surprised
     jump after_bottle
 
@@ -137,7 +141,7 @@ label yolei:
         "Bitter warm water only.":
             jump no_yolei_ending 
     
-        "Maybe?":
+        "There's the potion I found earlier...":
             jump yolei_bald_path
 
 
@@ -190,7 +194,11 @@ label yolei_bald_path:
     menu yolei_drinks_potions:
         e "What should I do?"
 
+        
         "I could trick him into drinking the balding potion (Deception)." if bottleKnowledge == True:
+            jump balding_potion_check
+
+        "I found a weird potion in the kitchen (Persuasion)." if not bottleKnowledge:
             jump balding_potion_check
 
         "This is a bad idea.":
@@ -221,7 +229,7 @@ label yolei_failed_lie:
     show screen statButton
     show emi_sad2 at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     show yolei_grin at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8) with dissolve
-    e 'Yolei must have sensed something was wrong and refused to drink the potion.'
+    e 'Yolei was suspicious and refused to drink the potion.'
     jump craft_path
 
 label yolei_bald_success:

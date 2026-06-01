@@ -2,13 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/yolei_path.rpy", line 217: expected statement.
-    elif lie_dice_roll == 1:
-                       ^
+File "game/yolei_path.rpy", line 43: end of line expected.
+    e 'bottleKnowledge is' + [bottleKnowledge]
+                           ^
 
-File "game/yolei_path.rpy", line 224: expected 'label_name' not found.
-    jump
-        ^
+File "game/yolei_path.rpy", line 59: end of line expected.
+    e 'bottleKnowledge is' + [bottleKnowledge]
+                           ^
 
 Ren'Py Version: Ren'Py 8.5.3.26051504
-Mon Jun  1 16:59:34 2026
+Mon Jun  1 18:25:37 2026
