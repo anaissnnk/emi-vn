@@ -43,4 +43,4 @@ default proficency = 3
 default expertise = 6
 
 #events variables
-default bottleKnowledge = None
+# default bottleKnowledge = None

@@ -39,8 +39,7 @@ label examine_bottle:
 
     "You rolled a [bottle_dice_roll]. Your intelligence bonus is ([intelligence]) and your expertise is ([expertise]). The total is [totalBottleCheck]."
     if bottle_dice_roll != 1 and totalBottleCheck > 5: 
-        return bottleKnowledge = True
-        e 'bottleKnowledge is ([bottleKnowledge])'
+        $ bottleKnowledge = True
         show screen statButton
         show emi_neutral at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
         e "There's a note behind the bottle."
@@ -55,17 +54,15 @@ label examine_bottle:
         jump after_bottle
 
     elif bottle_dice_roll == 1:
-        return bottleKnowledge = False
-        e 'bottleKnowledge is ([bottleKnowledge])'
+        $ bottleKnowledge = False
         jump unknown_bottle
 
 
 label unknown_bottle:
     show screen statButton
     show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
-    return bottleKnowledge = False
+    $ bottleKnowledge = False
     e "I don't know what this is. It's better not to touch it."
-    e 'bottleKnowledge is ([bottleKnowledge])'
     hide emi_surprised
     jump after_bottle
 
@@ -195,7 +192,7 @@ label yolei_bald_path:
         e "What should I do?"
 
         
-        "I could trick him into drinking the balding potion (Deception)." if bottleKnowledge == True:
+        "I could trick him into drinking the balding potion (Deception)." if bottleKnowledge:
             jump balding_potion_check
 
         "I found a weird potion in the kitchen (Persuasion)." if not bottleKnowledge:
