@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/yolei_path.rpy", line 191: expected menuitem
-    TODO:
-    ^
+File "game/yolei_path.rpy", line 218: expected statement.
+    elif lie_dice_roll == 1:
+                       ^
 
 Ren'Py Version: Ren'Py 8.5.3.26051504
-Mon Jun  1 09:49:25 2026
+Mon Jun  1 16:52:46 2026

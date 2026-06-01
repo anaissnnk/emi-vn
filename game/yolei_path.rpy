@@ -216,8 +216,6 @@ label balding_potion_check:
 
 
     elif lie_dice_roll == 1:
-        show screen statButton
-        show emi_sad at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
         e 'Yolei must have sensed something was wrong and refused to drink the potion.'
         jump craft_path
 
