@@ -179,6 +179,7 @@ label yolei_bald_path:
     show emi_disguise_smile at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
     e "I'm not sure you'd like it."
     voice "voice/yolei/yolei_victorious.mp3"
+    hide yolei_bored
     show yolei_grin at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8)
     y "Oooh? What's this?"
     y "Nothing weird, right?"
@@ -219,6 +220,7 @@ label balding_potion_check:
 label yolei_failed_lie:
     show screen statButton
     show emi_sad2 at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+    show yolei_grin at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8) with dissolve
     e 'Yolei must have sensed something was wrong and refused to drink the potion.'
     jump craft_path
 
