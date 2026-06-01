@@ -28,7 +28,7 @@ label yolei_path:
 
 label examine_bottle:
     hide screen statButton
-    $ dice_roll, totalBottleCheck = intelligence_expertise_check(intelligence, expertise)
+    $ bottle_dice_roll, totalBottleCheck = intelligence_expertise_check(intelligence, expertise)
     window hide
     pause 0.8
     show dice at Transform(zoom = 0.5) with dissolve:
@@ -37,8 +37,8 @@ label examine_bottle:
     pause 3.5
     hide dice
 
-    "You rolled a [dice_roll]. Your intelligence bonus is ([intelligence]) and your expertise is ([expertise]). The total is [totalBottleCheck]."
-    if dice_roll != 1 and totalBottleCheck > 5: 
+    "You rolled a [bottle_dice_roll]. Your intelligence bonus is ([intelligence]) and your expertise is ([expertise]). The total is [totalBottleCheck]."
+    if bottle_dice_roll != 1 and totalBottleCheck > 5: 
         $ bottleKnowledge = True
 
         show screen statButton
@@ -54,7 +54,7 @@ label examine_bottle:
         hide emi_surprised
         jump after_bottle
 
-    elif dice_roll == 1:
+    elif bottle_dice_roll == 1:
         jump unknown_bottle
 
 
@@ -62,7 +62,6 @@ label unknown_bottle:
     show screen statButton
     show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
     e "I don't know what this is. It's better not to touch it."
-    $ unknownBottle = True
     hide emi_surprised
     jump after_bottle
 
@@ -142,7 +141,7 @@ label yolei:
             jump no_yolei_ending 
     
         "Maybe?":
-            jump yolei_drinks_potions
+            jump yolei_bald_path
 
 
 label no_yolei_ending:
@@ -154,7 +153,7 @@ label no_yolei_ending:
     y "Boring. I'm gonna get a {i}real{/i} drink outside."
     hide emi_neutral
     show emi_surprised at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8)
-    e "Milk?"
+    e "A real drink... Milk?"
     hide yolei_bored
     show yolei_grin at Transform(xpos = 0.95, ypos = 0.95, anchor = (1.0, 1.0), zoom = 0.8)
     voice "voice/yolei/yolei_victorious.mp3"
@@ -186,25 +185,41 @@ label yolei_bald_path:
     hide screen statButton
 
     menu yolei_drinks_potions:
-        e "Should I convince him to drink the potion I found?"
+        e "What should I do?"
 
-        "I don't know what this is (Deception)." if bottleKnowledge == True:
+        "Perhaps I could trick him into drinking the balding potion (Deception)." if bottleKnowledge == True:
             jump balding_potion_check
 
-        "I don't know what this is." if bottleKnowledge == False:
-            jump yolei_bald_ending
-
         "Perhaps this is a bad idea.":
-            e "{i}I decided against making him drink the position, and Yolei just went home.{/i}"
+            e "{i}I decided against making him drink the potion, and Yolei just went home.{/i}"
             jump craft_path
 
 
 label balding_potion_check:
-'under construction'
+    hide screen statButton
+    $ lie_dice_roll, lieToYolei = deception_check(charisma)
+    window hide
+    pause 0.8
+    show dice at Transform(zoom = 0.5) with dissolve:
+        xpos 0.0 ypos 0.0
+        ease 2.0 xpos 0.5 ypos 0.5
+    pause 3.5
+    hide dice
 
-label yolei_bald_ending:
-'under construction'
+    "You rolled a [lie_dice_roll]. Your charisma bonus is ([charisma]). The total is [lieToYolei]."
+    if lie_dice_roll != 1 and lieToYolei > 5: 
+        $ lieToYolei = True
 
+    show screen statButton
+    show emi_disguise at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+    e "Emi lied to Yolei"
+
+
+    elif lie_dice_roll == 1:
+        show screen statButton
+        show emi_sad at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+        e 'Yolei must have sensed something was wrong and refused to drink the potion.'
+        jump craft_path
 
 
 
