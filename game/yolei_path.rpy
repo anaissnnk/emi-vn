@@ -209,15 +209,16 @@ label balding_potion_check:
     "You rolled a [lie_dice_roll]. Your charisma bonus is ([charisma]). The total is [lieToYolei]."
     if lie_dice_roll != 1 and lieToYolei > 5: 
         $ lieToYolei = True
-
-    show screen statButton
-    show emi_disguise at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
-    e "Emi lied to Yolei"
-
+        jump yolei_bald_success
 
     elif lie_dice_roll == 1:
-        e 'Yolei must have sensed something was wrong and refused to drink the potion.'
-        jump craft_path
+        jump yolei_failed_lie
 
+label yolei_failed_lie:
+    show screen statButton
+    show emi_sigh at Transform(xpos = 0.05, ypos = 0.95, anchor = (0.0, 1.0), zoom = 0.8) with dissolve
+    e 'Yolei must have sensed something was wrong and refused to drink the potion.'
+    jump craft_path
 
-
+label yolei_bald_success:
+    'TBD'
