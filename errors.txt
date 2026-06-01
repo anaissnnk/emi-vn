@@ -7,4 +7,4 @@ File "game/yolei_path.rpy", line 218: expected statement.
                        ^
 
 Ren'Py Version: Ren'Py 8.5.3.26051504
-Mon Jun  1 16:52:46 2026
+Mon Jun  1 16:55:07 2026
