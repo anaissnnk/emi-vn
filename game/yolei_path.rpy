@@ -186,19 +186,17 @@ label yolei_bald_path:
     hide screen statButton
 
     menu yolei_drinks_potions:
-        e "Should I convince him to drink the potion I found??"
+        e "Should I convince him to drink the potion I found?"
 
-        TODO: #correct
-        "I don't know what this is (Deception)." if bottleKnowledge = True:
+        "I don't know what this is (Deception)." if bottleKnowledge == True:
             jump balding_potion_check
 
-        TODO: #correct
-        "I don't know what this is." if unknownBottle = True:
+        "I don't know what this is." if bottleKnowledge == False:
             jump yolei_bald_ending
 
         "Perhaps this is a bad idea.":
             e "{i}I decided against making him drink the position, and Yolei just went home.{/i}"
-            jump craft_ending
+            jump craft_path
 
 
 label balding_potion_check:
