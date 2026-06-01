@@ -63,3 +63,10 @@ init python:
         dice_roll = renpy.random.randint(1, 20)
         total = dice_roll + intelligence + expertise
         return dice_roll, total
+
+# deception
+init python:
+    def deception_check_yolei (charisma):
+        dice_roll = renpy.random.randint(1, 20)
+        total = dice_roll + charisma
+        return dice_roll, total

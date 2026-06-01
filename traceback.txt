@@ -1,30 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/yolei_path.rpy", line 200, in script
-    $ lie_dice_roll, lieToYolei = deception_check(charisma)
-  File "game/yolei_path.rpy", line 200, in <module>
-    $ lie_dice_roll, lieToYolei = deception_check(charisma)
-                                  ^^^^^^^^^^^^^^^          
-NameError: name 'deception_check' is not defined
+  File "game/yolei_path.rpy", line 199, in script
+    $ lie_dice_roll = deception_check(charisma)
+  File "game/yolei_path.rpy", line 199, in <module>
+    $ lie_dice_roll = deception_check(charisma)
+                      ^^^^^^^^^^^^^^^          
+NameError: name 'deception_check' is not defined. Did you mean: 'deception_check_yolei'?
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/yolei_path.rpy", line 200, in script
-    $ lie_dice_roll, lieToYolei = deception_check(charisma)
+  File "game/yolei_path.rpy", line 199, in script
+    $ lie_dice_roll = deception_check(charisma)
   File "renpy/ast.py", line 1193, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "renpy/python.py", line 1276, in py_exec_bytecode
     exec(bytecode, globals, locals)
     ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/yolei_path.rpy", line 200, in <module>
-    $ lie_dice_roll, lieToYolei = deception_check(charisma)
-                                  ^^^^^^^^^^^^^^^          
-NameError: name 'deception_check' is not defined
+  File "game/yolei_path.rpy", line 199, in <module>
+    $ lie_dice_roll = deception_check(charisma)
+                      ^^^^^^^^^^^^^^^          
+NameError: name 'deception_check' is not defined. Did you mean: 'deception_check_yolei'?
 
 Windows-11-10.0.26200-SP0 AMD64
 Ren'Py 8.5.3.26051504
 Emi VN 1.0
-Mon Jun  1 17:05:45 2026
+Mon Jun  1 17:25:34 2026

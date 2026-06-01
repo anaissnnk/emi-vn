@@ -136,9 +136,6 @@ label yolei:
 
         "Bitter warm water only.":
             jump no_yolei_ending 
-
-        "Nope.":
-            jump no_yolei_ending 
     
         "Maybe?":
             jump yolei_bald_path
@@ -183,21 +180,23 @@ label yolei_bald_path:
     y "Oooh? What's this?"
     y "Nothing weird, right?"
     hide screen statButton
+    hide emi_neutral
+    hide yolei_grin
 
     menu yolei_drinks_potions:
         e "What should I do?"
 
-        "Perhaps I could trick him into drinking the balding potion (Deception)." if bottleKnowledge == True:
+        "I could trick him into drinking the balding potion (Deception)." if bottleKnowledge == True:
             jump balding_potion_check
 
-        "Perhaps this is a bad idea.":
+        "This is a bad idea.":
             e "{i}I decided against making him drink the potion, and Yolei just went home.{/i}"
             jump craft_path
 
 
 label balding_potion_check:
     hide screen statButton
-    $ lie_dice_roll, lieToYolei = deception_check(charisma)
+    $ lie_dice_roll = deception_check_yolei (charisma)
     window hide
     pause 0.8
     show dice at Transform(zoom = 0.5) with dissolve:
@@ -207,8 +206,8 @@ label balding_potion_check:
     hide dice
 
     "You rolled a [lie_dice_roll]. Your charisma bonus is ([charisma]). The total is [lieToYolei]."
-    if lie_dice_roll != 1 and lieToYolei > 5: 
-        $ lieToYolei = True
+    if lie_dice_roll != 1 and lie_dice_roll > 10: 
+        $ lieSuccessful = True
         jump yolei_bald_success
 
     elif lie_dice_roll == 1:
